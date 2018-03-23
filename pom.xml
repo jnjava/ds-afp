@@ -14,12 +14,12 @@
 		<repository>
 			<id>nexus-releases</id>
 			<name>Nexus Release Repository</name>
-			<url>http://192.168.4.111:8081/nexus/content/repositories/releases/</url>
+			<url>http://localhost:8081/nexus/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>nexus-snapshots</id>
 			<name>Nexus Snapshot Repository</name>
-			<url>http://192.168.4.111:8081/nexus/content/repositories/snapshots/</url>
+			<url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
@@ -49,6 +49,7 @@
 		<commons-logging.version>1.2</commons-logging.version>
 		<fastjson.version>1.2.7</fastjson.version>
 		<websocket-client.version>9.3.10.v20160621</websocket-client.version>
+		<lombok.version>1.16.4</lombok.version>
 
 		<!-- communication -->
 		<thrift.version>0.9.3</thrift.version>
@@ -186,6 +187,12 @@
 				<groupId>org.eclipse.jetty.websocket</groupId>
 				<artifactId>websocket-client</artifactId>
 				<version>${websocket-client.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+				<optional>true</optional>
 			</dependency>
 			<!-- Base Dependency End -->
 
