@@ -14,23 +14,23 @@
 		<repository>
 			<id>nexus-releases</id>
 			<name>Nexus Release Repository</name>
-			<url>http://192.168.4.111:8081/nexus/content/repositories/releases/</url>
+			<url>http://localhost:8081/nexus/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>nexus-snapshots</id>
 			<name>Nexus Snapshot Repository</name>
-			<url>http://192.168.4.111:8081/nexus/content/repositories/snapshots/</url>
+			<url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<junit.version>4.11</junit.version>
-		
-		<!-- ds.afp -->	
-		<ds.afp.version>6.1.0</ds.afp.version>		
+
+		<!-- ds.afp -->
+		<ds.afp.version>6.1.0</ds.afp.version>
 		<ds-log2-client-java.version>1.0.0</ds-log2-client-java.version>
-		
+
 		<!-- common projects -->
 		<commons-beanutils.version>1.9.2</commons-beanutils.version>
 		<commons-io.version>2.5</commons-io.version>
@@ -48,8 +48,8 @@
 		<fastjson.version>1.2.7</fastjson.version>
 		<websocket-client.version>9.3.10.v20160621</websocket-client.version>
 		<lombok.version>1.16.18</lombok.version>
-		
-		
+
+
 		<!-- communication -->
 		<thrift.version>0.9.3</thrift.version>
 		<activemq.version>5.14.0</activemq.version>
@@ -68,8 +68,7 @@
 		<org.apache.struts.version>2.3.15.1</org.apache.struts.version>
 		<spring.restdocs.mockmvc.version>2.0.0.RELEASE</spring.restdocs.mockmvc.version>
 		<spring.data.elasticsearch>3.0.2.RELEASE</spring.data.elasticsearch>
-		<spring.security.version></spring.security.version>
-		
+
 		<!-- hiberenate -->
 		<org.hibernate.version>5.1.0.Final</org.hibernate.version>
 		<hibernate-commons-annotations.version>5.0.1.Final</hibernate-commons-annotations.version>
@@ -87,6 +86,9 @@
 
 		<!-- 认证 -->
 		<ds-cas-client.version>3.1.10</ds-cas-client.version>
+
+		<!-- 工作流 -->
+		<activiti.version>5.22.0</activiti.version>
 
 	</properties>
 
@@ -195,7 +197,6 @@
 				<version>${lombok.version}</version>
 				<optional>true</optional>
 			</dependency>
-			
 			<!-- Base Dependency End -->
 
 			<!-- Ds Dependency Begin -->
@@ -203,7 +204,7 @@
 				<groupId>com.dscomm</groupId>
 				<artifactId>ds-afp-common</artifactId>
 				<version>${ds.afp.version}</version>
-			</dependency>			
+			</dependency>
 			<dependency>
 				<groupId>com.dscomm.comp</groupId>
 				<artifactId>ds-log2-client-java</artifactId>
@@ -316,7 +317,6 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-test</artifactId>
 				<version>${org.springframework.version}</version>
-				<scope>test</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
@@ -430,6 +430,22 @@
 				<groupId>org.csource</groupId>
 				<artifactId>fastdfs-client-java</artifactId>
 				<version>${fastdfs-client-java.version}</version>
+			</dependency>
+			<!-- 工作流 -->
+			<dependency>
+				<groupId>org.activiti</groupId>
+				<artifactId>activiti-engine</artifactId>
+				<version>${activiti.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.activiti</groupId>
+				<artifactId>activiti-spring</artifactId>
+				<version>${activiti.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.activiti</groupId>
+				<artifactId>activiti-bpmn-model</artifactId>
+				<version>${activiti.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
