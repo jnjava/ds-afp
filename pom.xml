@@ -26,13 +26,11 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<junit.version>4.11</junit.version>
-		<!-- ds.afp -->
-
-		<ds-utility.version>6.0.0</ds-utility.version>
-		<ds-core.version>6.0.0</ds-core.version>
-		<ds-utility-spring.version>6.0.0</ds-utility-spring.version>
-		<ds-net-thrift-java.version>1.0.0</ds-net-thrift-java.version>
+		
+		<!-- ds.afp -->	
+		<ds.afp.version>6.1.0</ds.afp.version>		
 		<ds-log2-client-java.version>1.0.0</ds-log2-client-java.version>
+		
 		<!-- common projects -->
 		<commons-beanutils.version>1.9.2</commons-beanutils.version>
 		<commons-io.version>2.5</commons-io.version>
@@ -50,7 +48,8 @@
 		<fastjson.version>1.2.7</fastjson.version>
 		<websocket-client.version>9.3.10.v20160621</websocket-client.version>
 		<lombok.version>1.16.18</lombok.version>
-
+		
+		
 		<!-- communication -->
 		<thrift.version>0.9.3</thrift.version>
 		<activemq.version>5.14.0</activemq.version>
@@ -69,6 +68,8 @@
 		<org.apache.struts.version>2.3.15.1</org.apache.struts.version>
 		<spring.restdocs.mockmvc.version>2.0.0.RELEASE</spring.restdocs.mockmvc.version>
 		<spring.data.elasticsearch>3.0.2.RELEASE</spring.data.elasticsearch>
+		<spring.security.version></spring.security.version>
+		
 		<!-- hiberenate -->
 		<org.hibernate.version>5.1.0.Final</org.hibernate.version>
 		<hibernate-commons-annotations.version>5.0.1.Final</hibernate-commons-annotations.version>
@@ -194,29 +195,15 @@
 				<version>${lombok.version}</version>
 				<optional>true</optional>
 			</dependency>
+			
 			<!-- Base Dependency End -->
 
 			<!-- Ds Dependency Begin -->
 			<dependency>
-				<groupId>com.dscomm.afp</groupId>
-				<artifactId>ds-core</artifactId>
-				<version>${ds-core.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.dscomm.afp</groupId>
-				<artifactId>ds-utility</artifactId>
-				<version>${ds-utility.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.dscomm.afp</groupId>
-				<artifactId>ds-utility-spring</artifactId>
-				<version>${ds-utility-spring.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.dscomm.comp</groupId>
-				<artifactId>ds-net-thrift-java</artifactId>
-				<version>${ds-net-thrift-java.version}</version>
-			</dependency>
+				<groupId>com.dscomm</groupId>
+				<artifactId>ds-afp-common</artifactId>
+				<version>${ds.afp.version}</version>
+			</dependency>			
 			<dependency>
 				<groupId>com.dscomm.comp</groupId>
 				<artifactId>ds-log2-client-java</artifactId>
